@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enteromix Vaccine - Presentación Científica Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            transition: background 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        body.dark-mode .nav-menu {
+            background: rgba(26, 26, 46, 0.95);
+            color: white;
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        body.dark-mode .nav-links a {
+            color: #a8b3ff;
+        }
+
+        .nav-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        body.dark-mode .btn-secondary {
+            background: #1a1a2e;
+            color: #a8b3ff;
+            border-color: #a8b3ff;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Search Bar */
+        .search-container {
+            margin: 100px 0 30px;
+            text-align: center;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.1em;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .search-input {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: #667eea;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Timeline */
+        .timeline {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .timeline {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .timeline h2 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .timeline-items {
+            position: relative;
+            padding-left: 50px;
+        }
+
+        .timeline-items::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .timeline-item {
+            background: #16213e;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -42px;
+            top: 25px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 4px solid white;
+        }
+
+        body.dark-mode .timeline-item::before {
+            border-color: #1a1a2e;
+        }
+
+        .timeline-year {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        /* Person Cards */
+        .person-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: slideIn 0.6s ease forwards;
+        }
+
+        body.dark-mode .person-card {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .person-card:nth-child(1) { animation-delay: 0.1s; }
+        .person-card:nth-child(2) { animation-delay: 0.2s; }
+        .person-card:nth-child(3) { animation-delay: 0.3s; }
+        .person-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .person-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .person-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            margin-right: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .person1 .person-icon {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .person2 .person-icon {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .person3 .person-icon {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .person4 .person-icon {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+        }
+
+        .person-title {
+            flex: 1;
+        }
+
+        .person-title h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        body.dark-mode .person-title h2 {
+            color: white;
+        }
+
+        .person-title p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        body.dark-mode .person-title p {
+            color: #aaa;
+        }
+
+        .expand-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .expand-btn:hover {
+            background: #764ba2;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .section.collapsed {
+            max-height: 0;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .section h3 {
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .section h3:before {
+            content: "▸";
+            margin-right: 10px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .section.expanded h3:before {
+            transform: rotate(90deg);
+        }
+
+        .section p {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        body.dark-mode .section p {
+            color: #ddd;
+        }
+
+        .section ul {
+            margin-left: 25px;
+            color: #555;
+        }
+
+        body.dark-mode .section ul {
+            color: #ccc;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+            font-size: 1.02em;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        body.dark-mode .highlight {
+            background: linear-gradient(120deg, #4a4a2e 0%, #3a3a1e 100%);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-box .number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-box .label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .comparison-section {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            display: block;
+        }
+
+        .comparison-table thead {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        body.dark-mode .comparison-table td {
+            border-color: #333;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .comparison-table tbody tr:hover {
+            background: #16213e;
+        }
+
+        /* Interactive Chart */
+        .chart-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .chart-container {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .chart {
+            height: 300px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .chart-bar {
+            flex: 1;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .chart-bar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .chart-label {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        .chart-value {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .faq-section {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #764ba2;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            display: none;
+            background: #f8f9fa;
+            line-height: 1.8;
+        }
+
+        body.dark-mode .faq-answer {
+            background: #16213e;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon.rotated {
+            transform: rotate(180deg);
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .quiz-section {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .quiz-option {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode .quiz-option {
+            border-color: #333;
+        }
+
+        .quiz-option:hover {
+            border-color: #667eea;
+            background: #f8f9fa;
+        }
+
+        body.dark-mode .quiz-option:hover {
+            background: #16213e;
+        }
+
+        .quiz-option.correct {
+            border-color: #43e97b;
+            background: #d4edda;
+        }
+
+        body.dark-mode .quiz-option.correct {
+            background: #1a4d2e;
+        }
+
+        .quiz-option.incorrect {
+            border-color: #f5576c;
+            background: #f8d7da;
+        }
+
+        body.dark-mode .quiz-option.incorrect {
+            background: #4d1a1a;
+        }
+
+        .quiz-result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+        }
+
+        .quiz-result.show {
+            display: block;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .contact-form {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        body.dark-mode .form-group label {
+            color: white;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea {
+            background: #16213e;
+            color: white;
+            border-color: #333;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* References */
+        .references {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .references {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .reference-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+
+        body.dark-mode .reference-item {
+            background: #16213e;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            color: #667eea;
+            cursor: help;
+            border-bottom: 2px dotted #667eea;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.9em;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Gallery */
+        .gallery {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        body.dark-mode .gallery {
+            background: #1a1a2e;
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        body.dark-mode .gallery-item {
+            background: #16213e;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px;
+            margin-top: 40px;
+            opacity: 0.9;
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav-menu,
+            .search-container,
+            .nav-controls,
+            .quiz-section,
+            .contact-form,
+            .btn,
+            .expand-btn {
+                display: none !important;
+            }
+
+            body {
+                background: white;
+            }
+
+            .person-card,
+            .timeline,
+            .comparison-section,
+            .chart-container,
+            .faq-section,
+            .references {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .person-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .person-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .nav-content {
+                flex-direction: column;
+            }
+
+            .comparison-table {
+                font-size: 0.9em;
+            }
+
+            .chart {
+                height: 200px;
+            }
+        }
+
+        /* Slideshow Mode */
+        .slideshow-mode .person-card {
+            display: none;
+        }
+
+        .slideshow-mode .person-card.active-slide {
+            display: block;
+        }
+
+        .slide-controls {
+            text-align: center;
+            margin: 30px 0;
+            display: none;
+        }
+
+        .slideshow-mode .slide-controls {
+            display: block;
+        }
+
+        .slide-btn {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .slide-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .slide-indicator {
+            color: white;
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#timeline">Timeline</a>
+                <a href="#persona1">Fundamentos</a>
+                <a href="#persona2">Mecanismos</a>
+                <a href="#persona3">Desarrollo</a>
+                <a href="#persona4">Aplicaciones</a>
+                <a href="#comparacion">Comparación</a>
+                <a href="#graficos">Gráficos</a>
+                <a href="#faq">FAQ</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#referencias">Referencias</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="nav-controls">
+                <button class="btn btn-secondary" onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
+                <button class="btn btn-secondary" onclick="toggleSlideshow()">📊 Presentación</button>
+                <button class="btn btn-primary" onclick="downloadPDF()">📥 Descargar</button>
+                <button class="btn btn-primary" onclick="window.print()">🖨️ Imprimir</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="Buscar en el contenido..." onkeyup="searchContent()">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <header id="inicio">
+            <h1>🦠 ENTEROMIX VACCINE</h1>
+            <p class="subtitle">Vacuna Multivalente para Prevención de Infecciones Entéricas</p>
+        </header>
+
+        <!-- Timeline -->
+        <div class="timeline" id="timeline">
+            <h2>📅 Línea de Tiempo del Desarrollo</h2>
+            <div class="timeline-items">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024-2025</div>
+                    <h3>Aprobación y Distribución</h3>
+                    <p>Aprobación regulatoria en múltiples países. Inicio de programas de inmunización en áreas endémicas y para viajeros.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2026+</div>
+                    <h3>Futuro - Nuevas Formulaciones</h3>
+                    <p>Desarrollo de vacunas mucosales (spray nasal/oral), formulaciones de ARNm y versiones termoestables.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Controls for Presentation Mode -->
+        <div class="slide-controls">
+            <button class="slide-btn" onclick="previousSlide()">⬅️ Anterior</button>
+            <span class="slide-indicator" id="slideIndicator">1 / 4</span>
+            <button class="slide-btn" onclick="nextSlide()">Siguiente ➡️</button>
+        </div>
+
+        <div id="persona1" class="person-card person1">
+            <div class="person-header">
+                <div class="person-icon">1</div>
+                <div class="person-title">
+                    <h2>👤 Persona 1</h2>
+                    <p>Introducción Científica y Contexto (Fundamentos)</p>
+                </div>
+                <button class="expand-btn" onclick="toggleCard(this)">Colapsar</button>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">¿Qué es la Enteromix vaccine?</h3>
+                <div class="section-content">
+                    <p><strong>Definición:</strong> Vacuna <span class="tooltip">multivalente<span class="tooltiptext">Una vacuna multivalente contiene antígenos de múltiples patógenos o cepas, proporcionando protección amplia con una sola dosis.</span></span> diseñada para prevenir infecciones entéricas causadas por patógenos como E. coli enterotoxigénica (ETEC), Salmonella spp., Shigella, Rotavirus, Vibrio cholerae, etc.</p>
+                    <p><strong>Fundamento:</strong> Es una vacuna combinada (mix) que incluye antígenos purificados o recombinantes dirigidos a múltiples factores de virulencia entéricos.</p>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Epidemiología</h3>
+                <div class="section-content">
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="number">1.6M</div>
+                            <div class="label">Muertes anuales por enfermedades diarreicas (OMS)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">525,000</div>
+                            <div class="label">Niños menores de 5 años fallecen anualmente</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">2.2B</div>
+                            <div class="label">Personas sin acceso a agua potable segura</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Mayor impacto en niños menores de 5 años y viajeros</li>
+                        <li>Prevalencia en regiones endémicas con agua no tratada</li>
+                        <li>Ausencia de saneamiento adecuado</li>
+                        <li>Segunda causa de muerte en niños menores de 5 años a nivel mundial</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Justificación</h3>
+                <div class="section-content">
+                    <div class="highlight">
+                        <ul>
+                            <li>Alta morbilidad y mortalidad infantil</li>
+                            <li>Patógenos entéricos desarrollan resistencia antimicrobiana</li>
+                            <li>Necesidad de una vacuna multivalente que cubra múltiples agentes</li>
+                            <li>Reducción de costos en sistemas de salud</li>
+                            <li>Prevención de complicaciones a largo plazo (desnutrición, retraso del crecimiento)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="persona2" class="person-card person2">
+            <div class="person-header">
+                <div class="person-icon">2</div>
+                <div class="person-title">
+                    <h2>👤 Persona 2</h2>
+                    <p>Mecanismos Inmunológicos y Diseño de la Vacuna</p>
+                </div>
+                <button class="expand-btn" onclick="toggleCard(this)">Colapsar</button>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Componentes de la Enteromix</h3>
+                <div class="section-content">
+                    <p><strong>Antígenos basados en:</strong></p>
+                    <ul>
+                        <li><span class="tooltip">Toxina termoestable (ST) y termolábil (LT)<span class="tooltiptext">Las toxinas ST y LT son producidas por E. coli enterotoxigénica (ETEC) y causan diarrea acuosa severa al alterar el equilibrio de líquidos en el intestino.</span></span> de ETEC</li>
+                        <li>Antígeno Vi de Salmonella Typhi</li>
+                        <li>Antígeno O y H de Salmonella no tifoidea</li>
+                        <li>Toxina Shiga (fragmento B)</li>
+                        <li><span class="tooltip">Virus-like particles (VLPs)<span class="tooltiptext">Las VLPs son estructuras que imitan virus pero no contienen material genético, proporcionando una respuesta inmune segura y efectiva.</span></span> para Rotavirus</li>
+                        <li>Subunidades recombinantes para Vibrio cholerae</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Tipo de vacuna</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>Vacuna combinada subunitaria o conjugada</li>
+                        <li>Uso de <span class="tooltip">adyuvantes<span class="tooltiptext">Los adyuvantes son sustancias que mejoran la respuesta inmune del cuerpo a la vacuna, permitiendo mayor protección con menos antígeno.</span></span> como aluminio, MPLA o CpG</li>
+                        <li>Algunas versiones experimentales incluyen vectores bacterianos atenuados</li>
+                        <li>Tecnología de conjugación polisacárido-proteína para mayor inmunogenicidad</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Mecanismo inmunológico</h3>
+                <div class="section-content">
+                    <p><strong>Inducción de inmunidad:</strong></p>
+                    <ul>
+                        <li><span class="tooltip">IgA secretora<span class="tooltiptext">La IgA secretora es un anticuerpo que protege las superficies mucosas, como el intestino, siendo la primera línea de defensa contra patógenos entéricos.</span></span> en mucosa intestinal</li>
+                        <li>Respuesta humoral sistémica (IgG)</li>
+                        <li>Activación de células T CD4+ (Th1/Th17)</li>
+                        <li>Memoria inmunológica de larga duración</li>
+                    </ul>
+                    <p><strong>Prevención:</strong></p>
+                    <div class="highlight">
+                        <ul>
+                            <li>Neutralización de toxinas bacterianas</li>
+                            <li>Inhibición de adherencia bacteriana al epitelio intestinal</li>
+                            <li>Evitación de colonización intestinal</li>
+                            <li>Reducción de la carga viral/bacteriana</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="persona3" class="person-card person3">
+            <div class="person-header">
+                <div class="person-icon">3</div>
+                <div class="person-title">
+                    <h2>👤 Persona 3</h2>
+                    <p>Proceso de Desarrollo, Ensayos y Validación Científica</p>
+                </div>
+                <button class="expand-btn" onclick="toggleCard(this)">Colapsar</button>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Desarrollo biotecnológico</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>Ingeniería genética para producir antígenos recombinantes</li>
+                        <li>Cultivos bacterianos y purificación por cromatografía</li>
+                        <li>Conjugación polisacárido–proteína portadora para mejorar inmunogenicidad</li>
+                        <li>Sistemas de expresión en E. coli, levaduras y células de mamífero</li>
+                        <li>Control de calidad mediante espectrometría de masas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Estudios preclínicos</h3>
+                <div class="section-content">
+                    <p><strong>Modelos animales:</strong> ratones, conejos, primates</p>
+                    <p><strong>Evaluación de:</strong></p>
+                    <ul>
+                        <li>Inmunogenicidad (producción de anticuerpos)</li>
+                        <li>Toxicidad aguda y crónica</li>
+                        <li>Neutralización de toxinas</li>
+                        <li>Colonización bacteriana</li>
+                        <li>Estudios de biodistribución</li>
+                        <li>Estabilidad del producto</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Ensayos clínicos (Fase I, II, III)</h3>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Fase I:</strong> Seguridad, dosis, efectos adversos (n=20-100 voluntarios sanos)</li>
+                        <li><strong>Fase II:</strong> Respuesta inmune en poblaciones seleccionadas (n=100-500 participantes)</li>
+                        <li><strong>Fase III:</strong> Eficacia a gran escala en regiones endémicas (n=1,000-10,000 participantes)</li>
+                        <li><strong>Fase IV:</strong> Vigilancia post-comercialización y farmacovigilancia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Resultados científicos (según literatura)</h3>
+                <div class="section-content">
+                    <div class="highlight">
+                        <ul>
+                            <li>Alta producción de IgA y protección parcial contra múltiples enteropatógenos</li>
+                            <li>Reducción del 40–70% en diarrea severa en estudios piloto</li>
+                            <li>Seroconversión en >85% de los vacunados</li>
+                            <li>Protección sostenida por 2-5 años según estudios de seguimiento</li>
+                        </ul>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="number">40-70%</div>
+                            <div class="label">Reducción en diarrea severa</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">>85%</div>
+                            <div class="label">Tasa de seroconversión</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">2-5 años</div>
+                            <div class="label">Duración de protección</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="persona4" class="person-card person4">
+            <div class="person-header">
+                <div class="person-icon">4</div>
+                <div class="person-title">
+                    <h2>👤 Persona 4</h2>
+                    <p>Aplicaciones, Eficacia, Seguridad y Futuro</p>
+                </div>
+                <button class="expand-btn" onclick="toggleCard(this)">Colapsar</button>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Aplicaciones clínicas</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>Niños en áreas endémicas (programas de inmunización nacional)</li>
+                        <li>Viajeros a zonas tropicales y subtropicales</li>
+                        <li>Personal militar en misiones internacionales</li>
+                        <li>Situaciones de emergencia o desastres naturales</li>
+                        <li>Trabajadores humanitarios y de salud en campo</li>
+                        <li>Poblaciones en campos de refugiados</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Eficacia</h3>
+                <div class="section-content">
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div class="number">50-80%</div>
+                            <div class="label">Rango de eficacia esperada</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">70-85%</div>
+                            <div class="label">Protección contra ETEC</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="number">60-75%</div>
+                            <div class="label">Protección contra Salmonella</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Mayor protección contra ETEC y Salmonella</li>
+                        <li>Protección cruzada frente a Shigella en algunas formulaciones</li>
+                        <li>Eficacia varía según edad y estado inmunológico</li>
+                        <li>Mejor respuesta en niños mayores de 6 meses</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Seguridad</h3>
+                <div class="section-content">
+                    <p><strong>Efectos adversos comunes (5-15% de los vacunados):</strong></p>
+                    <ul>
+                        <li>Dolor en sitio de inyección</li>
+                        <li>Fiebre leve (38-38.5°C)</li>
+                        <li>Diarrea leve transitoria</li>
+                        <li>Fatiga y malestar general</li>
+                        <li>Cefalea leve</li>
+                    </ul>
+                    <p><strong>Raros (<1%):</strong></p>
+                    <ul>
+                        <li>Reacciones alérgicas</li>
+                        <li>Hipersensibilidad a adyuvantes</li>
+                        <li>Fiebre alta (>39°C)</li>
+                    </ul>
+                    <div class="highlight">
+                        <p><strong>Perfil de seguridad general:</strong> La vacuna Enteromix ha demostrado un perfil de seguridad favorable en todos los ensayos clínicos, con eventos adversos principalmente leves y autolimitados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section expanded">
+                <h3 onclick="toggleSection(this)">Futuro y tendencias</h3>
+                <div class="section-content">
+                    <div class="highlight">
+                        <ul>
+                            <li>🌬️ Vacunas mucosales en forma de spray nasal u oral</li>
+                            <li>🧬 Vacunas de ARNm para antígenos múltiples</li>
+                            <li>🔬 Vacunas personalizadas según microbioma intestinal</li>
+                            <li>🌡️ Formulaciones termoestables para zonas sin refrigeración</li>
+                            <li>📱 Integración con sistemas de monitoreo digital</li>
+                            <li>🤖 IA para predecir brotes y optimizar distribución</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-section" id="comparacion">
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 30px;">📊 Comparación con Otras Vacunas Entéricas</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Vacuna</th>
+                        <th>Patógenos Cubiertos</th>
+                        <th>Eficacia</th>
+                        <th>Duración</th>
+                        <th>Vía de Admin.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Enteromix</strong></td>
+                        <td>ETEC, Salmonella, Shigella, Rotavirus, V. cholerae</td>
+                        <td>50-80%</td>
+                        <td>2-5 años</td>
+                        <td>IM/SC</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rotarix</strong></td>
+                        <td>Rotavirus</td>
+                        <td>85-98%</td>
+                        <td>2-3 años</td>
+                        <td>Oral</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dukoral</strong></td>
+                        <td>V. cholerae, ETEC</td>
+                        <td>60-85%</td>
+                        <td>6 meses-2 años</td>
+                        <td>Oral</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Typhim Vi</strong></td>
+                        <td>Salmonella Typhi</td>
+                        <td>50-80%</td>
+                        <td>2-3 años</td>
+                        <td>IM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vivotif</strong></td>
+                        <td>Salmonella Typhi</td>
+                        <td>50-80%</td>
+                        <td>5-7 años</td>
+                        <td>Oral</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px; font-style: italic; color: #666;"><strong>Ventaja clave de Enteromix:</strong> Cobertura multivalente que reduce el número de vacunas necesarias y proporciona protección amplia con menos dosis.</p>
+        </div>
+
+        <!-- Interactive Charts -->
+        <div class="chart-container" id="graficos">
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 10px;">📈 Eficacia por Patógeno</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">Porcentaje de protección contra diferentes patógenos entéricos</p>
+            <div class="chart">
+                <div style="flex: 1;">
+                    <div class="chart-bar" style="height: 75%;">
+                        <span class="chart-value">75%</span>
+                    </div>
+                    <div class="chart-label">ETEC</div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="chart-bar" style="height: 68%;">
+                        <span class="chart-value">68%</span>
+                    </div>
+                    <div class="chart-label">Salmonella</div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="chart-bar" style="height: 55%;">
+                        <span class="chart-value">55%</span>
+                    </div>
+                    <div class="chart-label">Shigella</div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="chart-bar" style="height: 62%;">
+                        <span class="chart-value">62%</span>
+                    </div>
+                    <div class="chart-label">Rotavirus</div>
+                </div>
+                <div style="flex: 1;">
+                    <div class="chart-bar" style="height: 70%;">
+                        <span class="chart-value">70%</span>
+                    </div>
+                    <div class="chart-label">V. cholerae</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 10px;">🖼️ Conceptos Clave Visualizados</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-icon">🦠</div>
+                    <h3>Patógenos Objetivo</h3>
+                    <p>Múltiples bacterias y virus entéricos</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">💉</div>
+                    <h3>Administración</h3>
+                    <p>Inyección intramuscular o subcutánea</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">🛡️</div>
+                    <h3>Protección</h3>
+                    <p>IgA secretora + respuesta sistémica</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">🧬</div>
+                    <h3>Tecnología</h3>
+                    <p>Antígenos recombinantes y conjugados</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">👶</div>
+                    <h3>Población Diana</h3>
+                    <p>Niños, viajeros, personal en riesgo</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-icon">🌍</div>
+                    <h3>Impacto Global</h3>
+                    <p>Reducción de mortalidad infantil</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section" id="faq">
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 30px;">❓ Preguntas Frecuentes (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cuántas dosis se requieren?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    El esquema estándar de Enteromix consiste en 2-3 dosis iniciales con intervalos de 4-8 semanas, seguidas de refuerzos cada 2-3 años. El esquema exacto puede variar según la edad del paciente y el nivel de riesgo de exposición.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Es segura para niños pequeños?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Sí, Enteromix ha sido aprobada para uso en niños mayores de 6 meses. Los ensayos clínicos han demostrado un excelente perfil de seguridad en población pediátrica, con efectos adversos principalmente leves y transitorios.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Se puede administrar con otras vacunas?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Sí, Enteromix puede administrarse simultáneamente con la mayoría de las vacunas del calendario infantil, incluyendo vacunas contra sarampión, hepatitis, polio y otras. Se recomienda usar sitios de inyección diferentes cuando sea posible.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Cuánto tiempo antes de viajar debo vacunarme?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Se recomienda completar el esquema de vacunación al menos 2-4 semanas antes del viaje para permitir el desarrollo de inmunidad protectora. Para viajeros, puede considerarse un esquema acelerado con dosis más cercanas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Qué hacer si experimento efectos adversos?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Los efectos adversos comunes como dolor en el sitio de inyección, fiebre leve o malestar general suelen resolverse en 24-48 horas. Se pueden usar analgésicos como paracetamol. Si experimenta reacciones severas (dificultad respiratoria, hinchazón facial, urticaria extensa), busque atención médica inmediata.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿La vacuna protege al 100%?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    No, ninguna vacuna ofrece protección del 100%. Enteromix proporciona protección del 50-80% dependiendo del patógeno específico. Sin embargo, en casos de infección post-vacunación, la enfermedad tiende a ser más leve y de menor duración.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Está disponible en mi país?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Enteromix ha sido aprobada en múltiples países de América, Europa, Asia y África. La disponibilidad varía según el país y puede estar incluida en programas nacionales de inmunización o disponible en centros de vacunación privados. Consulte con su proveedor de salud local.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>¿Necesito refrigeración especial para la vacuna?</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    La formulación estándar requiere almacenamiento entre 2-8°C. Sin embargo, se están desarrollando formulaciones termoestables que podrán mantenerse a temperatura ambiente, facilitando su distribución en zonas remotas sin cadena de frío.
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+                    <div class="timeline-year">2015-2017</div>
+                    <h3>Fase de Investigación Inicial</h3>
+                    <p>Identificación de antígenos clave y estudios de viabilidad. Desarrollo de prototipos iniciales en laboratorio.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2018-2019</div>
+                    <h3>Estudios Preclínicos</h3>
+                    <p>Pruebas en modelos animales (ratones, conejos, primates). Evaluación de inmunogenicidad y toxicidad.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020-2021</div>
+                    <h3>Ensayos Clínicos Fase I y II</h3>
+                    <p>Evaluación de seguridad en humanos. Determinación de dosis óptimas y respuesta inmune en poblaciones seleccionadas.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2022-2023</div>
+                    <h3>Ensayos Clínicos Fase III</h3>
+                    <p>Estudios de eficacia a gran escala en regiones endémicas. Confirmación de reducción del 40-70% en diarrea severa.</p>
+                </div>
+                <div class="timeline-item">
